@@ -1,0 +1,197 @@
+{
+  "config": {
+    "settings": [
+      "bild_style",
+      "pretrain_style",
+      "toolcall_style"
+    ],
+    "ks": [
+      2048,
+      4096
+    ],
+    "k_ref": 256,
+    "predictor_batches": 32,
+    "steps": 100,
+    "eval_batches": 16,
+    "batch": 4,
+    "seqlen": 512,
+    "chunk": 16384,
+    "lr": 1e-05,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "out": "results/e7_disagreement_wide"
+  },
+  "predictors": {
+    "bild_style": {
+      "tail_rank_corr": 0.4551554249895718,
+      "tail_mass_ratio": 0.10566461641840393,
+      "deficit_at_k_ref": 3841,
+      "d_teacher": 4096,
+      "k_ref": 256
+    },
+    "pretrain_style": {
+      "tail_rank_corr": 0.3949228742117247,
+      "tail_mass_ratio": 0.022162482320916534,
+      "deficit_at_k_ref": 3841,
+      "d_teacher": 4096,
+      "k_ref": 256
+    },
+    "toolcall_style": {
+      "tail_rank_corr": 0.18132247724081552,
+      "tail_mass_ratio": 0.019811513897530483,
+      "deficit_at_k_ref": 3841,
+      "d_teacher": 4096,
+      "k_ref": 256
+    }
+  },
+  "rows": [
+    {
+      "setting": "bild_style",
+      "k": 2048,
+      "seed": 0,
+      "deficit": 2049,
+      "eval_kl": 0.8240772113204002,
+      "wallclock_s": 48.74372625350952
+    },
+    {
+      "setting": "bild_style",
+      "k": 4096,
+      "seed": 0,
+      "deficit": 1,
+      "eval_kl": 0.8221009634435177,
+      "wallclock_s": 70.05084681510925
+    },
+    {
+      "setting": "bild_style",
+      "k": 2048,
+      "seed": 1,
+      "deficit": 2049,
+      "eval_kl": 0.8648335933685303,
+      "wallclock_s": 49.30166959762573
+    },
+    {
+      "setting": "bild_style",
+      "k": 4096,
+      "seed": 1,
+      "deficit": 1,
+      "eval_kl": 0.8628752380609512,
+      "wallclock_s": 70.02842855453491
+    },
+    {
+      "setting": "bild_style",
+      "k": 2048,
+      "seed": 2,
+      "deficit": 2049,
+      "eval_kl": 0.8719470426440239,
+      "wallclock_s": 49.259007930755615
+    },
+    {
+      "setting": "bild_style",
+      "k": 4096,
+      "seed": 2,
+      "deficit": 1,
+      "eval_kl": 0.8696104921400547,
+      "wallclock_s": 70.10938501358032
+    },
+    {
+      "setting": "pretrain_style",
+      "k": 2048,
+      "seed": 0,
+      "deficit": 2049,
+      "eval_kl": 0.36945292353630066,
+      "wallclock_s": 49.648298501968384
+    },
+    {
+      "setting": "pretrain_style",
+      "k": 4096,
+      "seed": 0,
+      "deficit": 1,
+      "eval_kl": 0.3689422942698002,
+      "wallclock_s": 80.93809270858765
+    },
+    {
+      "setting": "pretrain_style",
+      "k": 2048,
+      "seed": 1,
+      "deficit": 2049,
+      "eval_kl": 0.3905676491558552,
+      "wallclock_s": 63.14819121360779
+    },
+    {
+      "setting": "pretrain_style",
+      "k": 4096,
+      "seed": 1,
+      "deficit": 1,
+      "eval_kl": 0.3898796681314707,
+      "wallclock_s": 81.70834302902222
+    },
+    {
+      "setting": "pretrain_style",
+      "k": 2048,
+      "seed": 2,
+      "deficit": 2049,
+      "eval_kl": 0.39355585910379887,
+      "wallclock_s": 59.798710107803345
+    },
+    {
+      "setting": "pretrain_style",
+      "k": 4096,
+      "seed": 2,
+      "deficit": 1,
+      "eval_kl": 0.3931293096393347,
+      "wallclock_s": 78.21319341659546
+    },
+    {
+      "setting": "toolcall_style",
+      "k": 2048,
+      "seed": 0,
+      "deficit": 2049,
+      "eval_kl": 0.46281797997653484,
+      "wallclock_s": 49.106186866760254
+    },
+    {
+      "setting": "toolcall_style",
+      "k": 4096,
+      "seed": 0,
+      "deficit": 1,
+      "eval_kl": 0.4622180461883545,
+      "wallclock_s": 71.3648157119751
+    },
+    {
+      "setting": "toolcall_style",
+      "k": 2048,
+      "seed": 1,
+      "deficit": 2049,
+      "eval_kl": 0.47191748209297657,
+      "wallclock_s": 51.0943067073822
+    },
+    {
+      "setting": "toolcall_style",
+      "k": 4096,
+      "seed": 1,
+      "deficit": 1,
+      "eval_kl": 0.4712329860776663,
+      "wallclock_s": 71.45636653900146
+    },
+    {
+      "setting": "toolcall_style",
+      "k": 2048,
+      "seed": 2,
+      "deficit": 2049,
+      "eval_kl": 0.5356194861233234,
+      "wallclock_s": 51.05977487564087
+    },
+    {
+      "setting": "toolcall_style",
+      "k": 4096,
+      "seed": 2,
+      "deficit": 1,
+      "eval_kl": 0.5352021399885416,
+      "wallclock_s": 71.2820656299591
+    }
+  ],
+  "_hash": "7c5de8a0794810e5"
+}

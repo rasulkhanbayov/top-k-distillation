@@ -1,0 +1,23 @@
+{
+  "config": {
+    "teacher": "qwen3-4b",
+    "out": "../results/geometry",
+    "probe": 50000,
+    "seed": 0,
+    "device": "cpu"
+  },
+  "teacher": "qwen3-4b",
+  "report": {
+    "V": 151936,
+    "d": 2560,
+    "rank_estimate": 2560,
+    "full_column_rank": true,
+    "sigma_max": 72.65454864501953,
+    "sigma_min": 1.2205142974853516,
+    "cond": 59.52781295776367,
+    "ones_residual": 0.05046763549167607,
+    "row_norm_mean": 1.097372055053711,
+    "anisotropy": 0.28474053740501404
+  },
+  "_hash": "d680b16cbfb17199"
+}

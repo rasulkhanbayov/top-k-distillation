@@ -1,0 +1,343 @@
+{
+  "config": {
+    "settings": [
+      "bild_style",
+      "pretrain_style",
+      "toolcall_style"
+    ],
+    "ks": [
+      8,
+      64,
+      256,
+      1024
+    ],
+    "k_ref": 256,
+    "predictor_batches": 32,
+    "steps": 100,
+    "eval_batches": 16,
+    "batch": 4,
+    "seqlen": 512,
+    "chunk": 16384,
+    "lr": 1e-05,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "out": "results/e7_disagreement"
+  },
+  "predictors": {
+    "bild_style": {
+      "tail_rank_corr": 0.4551554249895718,
+      "tail_mass_ratio": 0.10566461641840393,
+      "deficit_at_k_ref": 3841,
+      "d_teacher": 4096,
+      "k_ref": 256
+    },
+    "pretrain_style": {
+      "tail_rank_corr": 0.3949228742117247,
+      "tail_mass_ratio": 0.022162482320916534,
+      "deficit_at_k_ref": 3841,
+      "d_teacher": 4096,
+      "k_ref": 256
+    },
+    "toolcall_style": {
+      "tail_rank_corr": 0.18132247724081552,
+      "tail_mass_ratio": 0.019811513897530483,
+      "deficit_at_k_ref": 3841,
+      "d_teacher": 4096,
+      "k_ref": 256
+    }
+  },
+  "rows": [
+    {
+      "setting": "bild_style",
+      "k": 8,
+      "seed": 0,
+      "deficit": 4089,
+      "eval_kl": 1.3266083598136902,
+      "wallclock_s": 30.952213764190674
+    },
+    {
+      "setting": "bild_style",
+      "k": 64,
+      "seed": 0,
+      "deficit": 4033,
+      "eval_kl": 0.9359299317002296,
+      "wallclock_s": 29.272307872772217
+    },
+    {
+      "setting": "bild_style",
+      "k": 256,
+      "seed": 0,
+      "deficit": 3841,
+      "eval_kl": 0.8555149137973785,
+      "wallclock_s": 30.892101287841797
+    },
+    {
+      "setting": "bild_style",
+      "k": 1024,
+      "seed": 0,
+      "deficit": 3073,
+      "eval_kl": 0.8288063146173954,
+      "wallclock_s": 37.84049725532532
+    },
+    {
+      "setting": "bild_style",
+      "k": 8,
+      "seed": 1,
+      "deficit": 4089,
+      "eval_kl": 1.379343830049038,
+      "wallclock_s": 31.227209329605103
+    },
+    {
+      "setting": "bild_style",
+      "k": 64,
+      "seed": 1,
+      "deficit": 4033,
+      "eval_kl": 0.9772182181477547,
+      "wallclock_s": 29.640689611434937
+    },
+    {
+      "setting": "bild_style",
+      "k": 256,
+      "seed": 1,
+      "deficit": 3841,
+      "eval_kl": 0.8962641693651676,
+      "wallclock_s": 31.36410427093506
+    },
+    {
+      "setting": "bild_style",
+      "k": 1024,
+      "seed": 1,
+      "deficit": 3073,
+      "eval_kl": 0.8698102161288261,
+      "wallclock_s": 37.85838603973389
+    },
+    {
+      "setting": "bild_style",
+      "k": 8,
+      "seed": 2,
+      "deficit": 4089,
+      "eval_kl": 1.3816019296646118,
+      "wallclock_s": 30.19164204597473
+    },
+    {
+      "setting": "bild_style",
+      "k": 64,
+      "seed": 2,
+      "deficit": 4033,
+      "eval_kl": 0.9882846064865589,
+      "wallclock_s": 29.305646419525146
+    },
+    {
+      "setting": "bild_style",
+      "k": 256,
+      "seed": 2,
+      "deficit": 3841,
+      "eval_kl": 0.9045640975236893,
+      "wallclock_s": 31.37835192680359
+    },
+    {
+      "setting": "bild_style",
+      "k": 1024,
+      "seed": 2,
+      "deficit": 3073,
+      "eval_kl": 0.8767852932214737,
+      "wallclock_s": 29.507806062698364
+    },
+    {
+      "setting": "pretrain_style",
+      "k": 8,
+      "seed": 0,
+      "deficit": 4089,
+      "eval_kl": 0.5505583826452494,
+      "wallclock_s": 22.513545513153076
+    },
+    {
+      "setting": "pretrain_style",
+      "k": 64,
+      "seed": 0,
+      "deficit": 4033,
+      "eval_kl": 0.4101327247917652,
+      "wallclock_s": 17.16342854499817
+    },
+    {
+      "setting": "pretrain_style",
+      "k": 256,
+      "seed": 0,
+      "deficit": 3841,
+      "eval_kl": 0.3795341346412897,
+      "wallclock_s": 24.684005737304688
+    },
+    {
+      "setting": "pretrain_style",
+      "k": 1024,
+      "seed": 0,
+      "deficit": 3073,
+      "eval_kl": 0.370939165353775,
+      "wallclock_s": 33.866636753082275
+    },
+    {
+      "setting": "pretrain_style",
+      "k": 8,
+      "seed": 1,
+      "deficit": 4089,
+      "eval_kl": 0.572930283844471,
+      "wallclock_s": 34.99683976173401
+    },
+    {
+      "setting": "pretrain_style",
+      "k": 64,
+      "seed": 1,
+      "deficit": 4033,
+      "eval_kl": 0.43066746927797794,
+      "wallclock_s": 23.21421480178833
+    },
+    {
+      "setting": "pretrain_style",
+      "k": 256,
+      "seed": 1,
+      "deficit": 3841,
+      "eval_kl": 0.400370966643095,
+      "wallclock_s": 25.897819757461548
+    },
+    {
+      "setting": "pretrain_style",
+      "k": 1024,
+      "seed": 1,
+      "deficit": 3073,
+      "eval_kl": 0.3918642941862345,
+      "wallclock_s": 35.296229124069214
+    },
+    {
+      "setting": "pretrain_style",
+      "k": 8,
+      "seed": 2,
+      "deficit": 4089,
+      "eval_kl": 0.5689995791763067,
+      "wallclock_s": 37.06041598320007
+    },
+    {
+      "setting": "pretrain_style",
+      "k": 64,
+      "seed": 2,
+      "deficit": 4033,
+      "eval_kl": 0.43239167891442776,
+      "wallclock_s": 23.619327545166016
+    },
+    {
+      "setting": "pretrain_style",
+      "k": 256,
+      "seed": 2,
+      "deficit": 3841,
+      "eval_kl": 0.40318684093654156,
+      "wallclock_s": 25.20223093032837
+    },
+    {
+      "setting": "pretrain_style",
+      "k": 1024,
+      "seed": 2,
+      "deficit": 3073,
+      "eval_kl": 0.3946388550102711,
+      "wallclock_s": 34.54099750518799
+    },
+    {
+      "setting": "toolcall_style",
+      "k": 8,
+      "seed": 0,
+      "deficit": 4089,
+      "eval_kl": 0.5389676950871944,
+      "wallclock_s": 30.235206842422485
+    },
+    {
+      "setting": "toolcall_style",
+      "k": 64,
+      "seed": 0,
+      "deficit": 4033,
+      "eval_kl": 0.479617465287447,
+      "wallclock_s": 33.37150740623474
+    },
+    {
+      "setting": "toolcall_style",
+      "k": 256,
+      "seed": 0,
+      "deficit": 3841,
+      "eval_kl": 0.4682128932327032,
+      "wallclock_s": 34.80491828918457
+    },
+    {
+      "setting": "toolcall_style",
+      "k": 1024,
+      "seed": 0,
+      "deficit": 3073,
+      "eval_kl": 0.4641081504523754,
+      "wallclock_s": 40.775782108306885
+    },
+    {
+      "setting": "toolcall_style",
+      "k": 8,
+      "seed": 1,
+      "deficit": 4089,
+      "eval_kl": 0.5574680510908365,
+      "wallclock_s": 32.38905930519104
+    },
+    {
+      "setting": "toolcall_style",
+      "k": 64,
+      "seed": 1,
+      "deficit": 4033,
+      "eval_kl": 0.4920183978974819,
+      "wallclock_s": 30.636125326156616
+    },
+    {
+      "setting": "toolcall_style",
+      "k": 256,
+      "seed": 1,
+      "deficit": 3841,
+      "eval_kl": 0.4783866871148348,
+      "wallclock_s": 32.30394983291626
+    },
+    {
+      "setting": "toolcall_style",
+      "k": 1024,
+      "seed": 1,
+      "deficit": 3073,
+      "eval_kl": 0.4733310528099537,
+      "wallclock_s": 38.92843294143677
+    },
+    {
+      "setting": "toolcall_style",
+      "k": 8,
+      "seed": 2,
+      "deficit": 4089,
+      "eval_kl": 0.6167448498308659,
+      "wallclock_s": 32.24743413925171
+    },
+    {
+      "setting": "toolcall_style",
+      "k": 64,
+      "seed": 2,
+      "deficit": 4033,
+      "eval_kl": 0.5531347803771496,
+      "wallclock_s": 31.01992154121399
+    },
+    {
+      "setting": "toolcall_style",
+      "k": 256,
+      "seed": 2,
+      "deficit": 3841,
+      "eval_kl": 0.5412054397165775,
+      "wallclock_s": 32.06345343589783
+    },
+    {
+      "setting": "toolcall_style",
+      "k": 1024,
+      "seed": 2,
+      "deficit": 3073,
+      "eval_kl": 0.5365160331130028,
+      "wallclock_s": 38.92144989967346
+    }
+  ],
+  "_hash": "463a252141111387"
+}

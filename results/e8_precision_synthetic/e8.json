@@ -1,0 +1,91 @@
+{
+  "config": {
+    "teacher": null,
+    "V": 151936,
+    "d": 4096,
+    "n": 64,
+    "ks": [
+      64,
+      256,
+      1024,
+      4096
+    ],
+    "seed": 0,
+    "out": "results/e8_precision_synthetic"
+  },
+  "rows": [
+    {
+      "scheme": "hidden",
+      "dtype": "fp32",
+      "bytes": 16384,
+      "kl": 0.0,
+      "max_logp_err": 0.0,
+      "kind": "bit-exact",
+      "exact": true
+    },
+    {
+      "scheme": "hidden",
+      "dtype": "bf16",
+      "bytes": 8192,
+      "kl": 1.0641996065979527e-12,
+      "max_logp_err": 0.018486864506214506,
+      "kind": "quantized",
+      "exact": true
+    },
+    {
+      "scheme": "hidden",
+      "dtype": "fp16",
+      "bytes": 8192,
+      "kl": 1.4695337991074525e-14,
+      "max_logp_err": 0.002345257323290606,
+      "kind": "quantized",
+      "exact": true
+    },
+    {
+      "scheme": "hidden",
+      "dtype": "int8",
+      "bytes": 4100,
+      "kl": 2.6033428772091493e-11,
+      "max_logp_err": 0.08866539962755732,
+      "kind": "quantized",
+      "exact": true
+    },
+    {
+      "scheme": "top-64",
+      "dtype": "fp16",
+      "bytes": 384,
+      "kl": null,
+      "max_logp_err": null,
+      "kind": "truncated",
+      "exact": false
+    },
+    {
+      "scheme": "top-256",
+      "dtype": "fp16",
+      "bytes": 1536,
+      "kl": null,
+      "max_logp_err": null,
+      "kind": "truncated",
+      "exact": false
+    },
+    {
+      "scheme": "top-1024",
+      "dtype": "fp16",
+      "bytes": 6144,
+      "kl": null,
+      "max_logp_err": null,
+      "kind": "truncated",
+      "exact": false
+    },
+    {
+      "scheme": "top-4096",
+      "dtype": "fp16",
+      "bytes": 24576,
+      "kl": null,
+      "max_logp_err": null,
+      "kind": "truncated",
+      "exact": false
+    }
+  ],
+  "_hash": "c5fe202659dca6a5"
+}

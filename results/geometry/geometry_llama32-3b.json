@@ -1,0 +1,23 @@
+{
+  "config": {
+    "teacher": "llama32-3b",
+    "out": "../results/geometry",
+    "probe": 50000,
+    "seed": 0,
+    "device": "cpu"
+  },
+  "teacher": "llama32-3b",
+  "report": {
+    "V": 128256,
+    "d": 3072,
+    "rank_estimate": 3072,
+    "full_column_rank": true,
+    "sigma_max": 98.24665069580078,
+    "sigma_min": 1.6157346963882446,
+    "cond": 60.80617904663086,
+    "ones_residual": 0.04649224201765676,
+    "row_norm_mean": 1.147452473640442,
+    "anisotropy": 0.3712729215621948
+  },
+  "_hash": "84ed4aa6a58d3379"
+}

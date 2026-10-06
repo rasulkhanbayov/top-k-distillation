@@ -1,0 +1,53 @@
+{
+  "config": {
+    "settings": [
+      "bild_style",
+      "pretrain_style",
+      "toolcall_style"
+    ],
+    "ks": [
+      8,
+      64,
+      256,
+      1024
+    ],
+    "k_ref": 256,
+    "predictor_batches": 32,
+    "steps": 100,
+    "eval_batches": 16,
+    "batch": 4,
+    "seqlen": 512,
+    "chunk": 16384,
+    "lr": 1e-05,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "out": "results/e7_disagreement"
+  },
+  "predictors": {
+    "bild_style": {
+      "tail_rank_corr": 0.4551554249895718,
+      "tail_mass_ratio": 0.10566461641840393,
+      "deficit_at_k_ref": 3841,
+      "d_teacher": 4096,
+      "k_ref": 256
+    },
+    "pretrain_style": {
+      "tail_rank_corr": 0.3949228742117247,
+      "tail_mass_ratio": 0.022162482320916534,
+      "deficit_at_k_ref": 3841,
+      "d_teacher": 4096,
+      "k_ref": 256
+    },
+    "toolcall_style": {
+      "tail_rank_corr": 0.18132247724081552,
+      "tail_mass_ratio": 0.019811513897530483,
+      "deficit_at_k_ref": 3841,
+      "d_teacher": 4096,
+      "k_ref": 256
+    }
+  },
+  "_hash": "f970d5797d0872cb"
+}

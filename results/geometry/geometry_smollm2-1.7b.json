@@ -1,0 +1,23 @@
+{
+  "config": {
+    "teacher": "smollm2-1.7b",
+    "out": "../results/geometry",
+    "probe": 50000,
+    "seed": 0,
+    "device": "cpu"
+  },
+  "teacher": "smollm2-1.7b",
+  "report": {
+    "V": 49152,
+    "d": 2048,
+    "rank_estimate": 2048,
+    "full_column_rank": true,
+    "sigma_max": 214.69265747070312,
+    "sigma_min": 1.8630218505859375,
+    "cond": 115.23893737792969,
+    "ones_residual": 0.04655877484507002,
+    "row_norm_mean": 3.149104356765747,
+    "anisotropy": 0.26995977759361267
+  },
+  "_hash": "b185a67fe3fd6f2c"
+}
