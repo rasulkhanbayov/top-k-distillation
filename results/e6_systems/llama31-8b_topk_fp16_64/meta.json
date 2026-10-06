@@ -1,0 +1,11 @@
+{
+  "kind": "topk",
+  "dtype": "fp16",
+  "d": 0,
+  "k": 64,
+  "n_positions": 8192,
+  "n_shards": 1,
+  "bytes_on_disk": 3145984,
+  "teacher": "llama31-8b",
+  "softcap": 0.0
+}

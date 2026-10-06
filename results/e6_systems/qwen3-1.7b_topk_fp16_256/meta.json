@@ -1,0 +1,11 @@
+{
+  "kind": "topk",
+  "dtype": "fp16",
+  "d": 0,
+  "k": 256,
+  "n_positions": 8192,
+  "n_shards": 1,
+  "bytes_on_disk": 12583168,
+  "teacher": "qwen3-1.7b",
+  "softcap": 0.0
+}

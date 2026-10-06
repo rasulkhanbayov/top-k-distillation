@@ -1,0 +1,11 @@
+{
+  "kind": "hidden_state",
+  "dtype": "fp32",
+  "d": 2560,
+  "k": 0,
+  "n_positions": 8192,
+  "n_shards": 1,
+  "bytes_on_disk": 83886208,
+  "teacher": "gemma3-4b",
+  "softcap": 0.0
+}

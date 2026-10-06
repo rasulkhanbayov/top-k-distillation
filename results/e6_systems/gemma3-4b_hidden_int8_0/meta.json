@@ -1,0 +1,11 @@
+{
+  "kind": "hidden_state",
+  "dtype": "int8",
+  "d": 2560,
+  "k": 0,
+  "n_positions": 8192,
+  "n_shards": 1,
+  "bytes_on_disk": 21004544,
+  "teacher": "gemma3-4b",
+  "softcap": 0.0
+}

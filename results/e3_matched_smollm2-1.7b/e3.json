@@ -1,0 +1,195 @@
+{
+  "config": {
+    "teacher": "smollm2-1.7b",
+    "student": "smollm2-360m",
+    "arms": [
+      "full_fkl_cached",
+      "topk_fkl",
+      "feature"
+    ],
+    "match": "storage",
+    "budget_bytes": 6144,
+    "k": 1024,
+    "top_p": 0.95,
+    "temperature": 1.0,
+    "cache_dtype": "bf16",
+    "chunk": 16384,
+    "lr": 2e-05,
+    "weight_decay": 0.1,
+    "steps": 500,
+    "batch": 4,
+    "seqlen": 512,
+    "cache_batches": 500,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "out": "results/e3_matched_smollm2-1.7b"
+  },
+  "results": {
+    "full_fkl_cached": {
+      "train_loss": {
+        "mean": 0.34683650955557827,
+        "lo": 0.3467682187538594,
+        "hi": 0.3468989835431178
+      },
+      "val_ppl": {
+        "mean": 12.55817766199889,
+        "lo": 12.554658083204133,
+        "hi": 12.561755215539222
+      },
+      "bytes_per_position": {
+        "mean": 4096.0,
+        "lo": 4096.0,
+        "hi": 4096.0
+      }
+    },
+    "topk_fkl": {
+      "train_loss": {
+        "mean": 0.3322306348631779,
+        "lo": 0.3321942477176587,
+        "hi": 0.33225791690250234
+      },
+      "val_ppl": {
+        "mean": 12.569077088804873,
+        "lo": 12.567457452033269,
+        "hi": 12.570724728627377
+      },
+      "bytes_per_position": {
+        "mean": 6144.0,
+        "lo": 6144.0,
+        "hi": 6144.0
+      }
+    },
+    "feature": {
+      "train_loss": {
+        "mean": 1.2152994791666667,
+        "lo": 1.1880859375000001,
+        "hi": 1.2434895833333333
+      },
+      "val_ppl": {
+        "mean": 684.65449814696,
+        "lo": 565.0139445294449,
+        "hi": 807.8731394584967
+      },
+      "bytes_per_position": {
+        "mean": 4096.0,
+        "lo": 4096.0,
+        "hi": 4096.0
+      }
+    },
+    "_test_cached_vs_topk": {
+      "mean_diff": -0.01089942680598129,
+      "p_value": 0.03125,
+      "n": 6
+    },
+    "_test_cached_vs_feature": {
+      "mean_diff": -672.096320484961,
+      "p_value": 0.03125,
+      "n": 6
+    }
+  },
+  "per_seed_by_arm": {
+    "full_fkl_cached": [
+      {
+        "train_loss": 0.34668939858675,
+        "val_ppl": 12.56555571900053,
+        "bytes_per_position": 4096
+      },
+      {
+        "train_loss": 0.34693203270435335,
+        "val_ppl": 12.553980549368967,
+        "bytes_per_position": 4096
+      },
+      {
+        "train_loss": 0.34677671566605567,
+        "val_ppl": 12.55974958245679,
+        "bytes_per_position": 4096
+      },
+      {
+        "train_loss": 0.34691770672798156,
+        "val_ppl": 12.552093914344388,
+        "bytes_per_position": 4096
+      },
+      {
+        "train_loss": 0.34686525985598565,
+        "val_ppl": 12.56013400440799,
+        "bytes_per_position": 4096
+      },
+      {
+        "train_loss": 0.3468379437923431,
+        "val_ppl": 12.557552202414673,
+        "bytes_per_position": 4096
+      }
+    ],
+    "topk_fkl": [
+      {
+        "train_loss": 0.33225585147738457,
+        "val_ppl": 12.56929361261888,
+        "bytes_per_position": 6144
+      },
+      {
+        "train_loss": 0.33227327540516854,
+        "val_ppl": 12.56748857307679,
+        "bytes_per_position": 6144
+      },
+      {
+        "train_loss": 0.3322176098823547,
+        "val_ppl": 12.566947373930017,
+        "bytes_per_position": 6144
+      },
+      {
+        "train_loss": 0.3321478247642517,
+        "val_ppl": 12.567033889321959,
+        "bytes_per_position": 6144
+      },
+      {
+        "train_loss": 0.3322406969964504,
+        "val_ppl": 12.572005217455859,
+        "bytes_per_position": 6144
+      },
+      {
+        "train_loss": 0.33224855065345765,
+        "val_ppl": 12.571693866425722,
+        "bytes_per_position": 6144
+      }
+    ],
+    "feature": [
+      {
+        "train_loss": 1.176171875,
+        "val_ppl": 793.0568084454555,
+        "bytes_per_position": 4096
+      },
+      {
+        "train_loss": 1.187890625,
+        "val_ppl": 877.9603915467651,
+        "bytes_per_position": 4096
+      },
+      {
+        "train_loss": 1.26484375,
+        "val_ppl": 478.5841406320344,
+        "bytes_per_position": 4096
+      },
+      {
+        "train_loss": 1.21953125,
+        "val_ppl": 797.0512114223936,
+        "bytes_per_position": 4096
+      },
+      {
+        "train_loss": 1.184375,
+        "val_ppl": 658.3017168678748,
+        "bytes_per_position": 4096
+      },
+      {
+        "train_loss": 1.258984375,
+        "val_ppl": 502.9727199672363,
+        "bytes_per_position": 4096
+      }
+    ]
+  },
+  "_hash": "fd03e106c73fef60"
+}

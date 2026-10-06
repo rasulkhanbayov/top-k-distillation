@@ -1,0 +1,85 @@
+{
+  "config": {
+    "teacher": "qwen3-1.7b",
+    "student": "qwen3-0.6b",
+    "arms": [
+      "full_fkl_online"
+    ],
+    "match": "storage",
+    "budget_bytes": 6144,
+    "k": 1024,
+    "top_p": 0.95,
+    "temperature": 1.0,
+    "cache_dtype": "bf16",
+    "chunk": 16384,
+    "lr": 2e-05,
+    "weight_decay": 0.1,
+    "steps": 500,
+    "batch": 4,
+    "seqlen": 512,
+    "cache_batches": 500,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "out": "results/e3_online_qwen3-1.7b"
+  },
+  "results": {
+    "full_fkl_online": {
+      "train_loss": {
+        "mean": 0.4182565902670225,
+        "lo": 0.41820883924762414,
+        "hi": 0.4183036247889201
+      },
+      "val_ppl": {
+        "mean": 18.61822037268287,
+        "lo": 18.615311243904728,
+        "hi": 18.62111905216656
+      },
+      "bytes_per_position": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0
+      }
+    }
+  },
+  "per_seed_by_arm": {
+    "full_fkl_online": [
+      {
+        "train_loss": 0.41822936236858366,
+        "val_ppl": 18.61395672522044,
+        "bytes_per_position": 0
+      },
+      {
+        "train_loss": 0.418162801861763,
+        "val_ppl": 18.614569167305316,
+        "bytes_per_position": 0
+      },
+      {
+        "train_loss": 0.41834075599908827,
+        "val_ppl": 18.622251368169263,
+        "bytes_per_position": 0
+      },
+      {
+        "train_loss": 0.418272040784359,
+        "val_ppl": 18.613872959798897,
+        "bytes_per_position": 0
+      },
+      {
+        "train_loss": 0.4182205483317375,
+        "val_ppl": 18.622723112532377,
+        "bytes_per_position": 0
+      },
+      {
+        "train_loss": 0.41831403225660324,
+        "val_ppl": 18.62194890307095,
+        "bytes_per_position": 0
+      }
+    ]
+  },
+  "_hash": "fd1c1fa9babc4ae2"
+}

@@ -1,0 +1,11 @@
+{
+  "kind": "hidden_state",
+  "dtype": "fp16",
+  "d": 8192,
+  "k": 0,
+  "n_positions": 8192,
+  "n_shards": 1,
+  "bytes_on_disk": 134217856,
+  "teacher": "llama31-70b",
+  "softcap": 0.0
+}

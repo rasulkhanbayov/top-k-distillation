@@ -1,0 +1,94 @@
+{
+  "config": {
+    "teacher": "llama31-8b",
+    "student": "llama32-1b",
+    "arms": [
+      "full_fkl_online",
+      "full_fkl_cached",
+      "topk_fkl"
+    ],
+    "match": "storage",
+    "budget_bytes": 8192,
+    "k": 256,
+    "top_p": 0.95,
+    "temperature": 1.0,
+    "cache_dtype": "bf16",
+    "chunk": 16384,
+    "lr": 2e-05,
+    "weight_decay": 0.1,
+    "steps": 500,
+    "batch": 4,
+    "seqlen": 512,
+    "cache_batches": 500,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "out": "results/e3_offpolicy_3seed"
+  },
+  "results": {
+    "full_fkl_online": {
+      "train_loss": {
+        "mean": 0.3480839838584264,
+        "lo": 0.3478890419006347,
+        "hi": 0.34838269352912904
+      },
+      "val_ppl": {
+        "mean": 11.65506332690543,
+        "lo": 11.651758596791352,
+        "hi": 11.661459226754834
+      },
+      "bytes_per_position": {
+        "mean": 0.0,
+        "lo": 0.0,
+        "hi": 0.0
+      }
+    },
+    "full_fkl_cached": {
+      "train_loss": {
+        "mean": 0.3479146351416906,
+        "lo": 0.34777863025665284,
+        "hi": 0.3480016812682152
+      },
+      "val_ppl": {
+        "mean": 11.656284219734836,
+        "lo": 11.653693978783588,
+        "hi": 11.660028150751222
+      },
+      "bytes_per_position": {
+        "mean": 8192.0,
+        "lo": 8192.0,
+        "hi": 8192.0
+      }
+    },
+    "topk_fkl": {
+      "train_loss": {
+        "mean": 0.3277177308996518,
+        "lo": 0.3181407779455185,
+        "hi": 0.34634068310260774
+      },
+      "val_ppl": {
+        "mean": 12.11387473066712,
+        "lo": 12.006073268386393,
+        "hi": 12.315202262206347
+      },
+      "bytes_per_position": {
+        "mean": 1536.0,
+        "lo": 1536.0,
+        "hi": 1536.0
+      }
+    },
+    "_test_cached_vs_online": {
+      "mean_diff": 0.00122089282940685,
+      "p_value": 0.7539,
+      "n": 3
+    },
+    "_test_cached_vs_topk": {
+      "mean_diff": -0.4575905109322835,
+      "p_value": 0.24695,
+      "n": 3
+    }
+  },
+  "_hash": "33167dc1f5f214ae"
+}

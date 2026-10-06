@@ -1,0 +1,123 @@
+{
+  "config": {
+    "recipe": "gkd",
+    "teacher": "qwen3-8b",
+    "student": "qwen3-0.6b",
+    "supervision": [
+      "topk",
+      "exact"
+    ],
+    "select": [
+      "teacher",
+      "student"
+    ],
+    "k": 100,
+    "refresh": 0,
+    "steps": 500,
+    "batch": 8,
+    "prompt_len": 256,
+    "max_new": 256,
+    "temp": 1.0,
+    "chunk": 16384,
+    "lr": 1e-05,
+    "seeds": [
+      0,
+      1,
+      2
+    ],
+    "out": "results/e4_onpolicy_3seed"
+  },
+  "rows": [
+    {
+      "seed": 0,
+      "supervision": "topk",
+      "selection": "teacher",
+      "recipe": "gkd",
+      "refresh": 0,
+      "wallclock_s": 4007.029928445816,
+      "loss_low_entropy": 0.46098216891288757,
+      "loss_high_entropy": 5.056363787651062
+    },
+    {
+      "seed": 0,
+      "supervision": "topk",
+      "selection": "student",
+      "recipe": "gkd",
+      "refresh": 0,
+      "wallclock_s": 3805.2728056907654,
+      "loss_low_entropy": 0.42586490273475647,
+      "loss_high_entropy": 4.249356226921082
+    },
+    {
+      "seed": 0,
+      "supervision": "exact",
+      "selection": "teacher",
+      "recipe": "gkd",
+      "refresh": 0,
+      "wallclock_s": 4047.2760140895844,
+      "loss_low_entropy": 0.414195776283741,
+      "loss_high_entropy": 0.7247425734996795
+    },
+    {
+      "seed": 1,
+      "supervision": "topk",
+      "selection": "teacher",
+      "recipe": "gkd",
+      "refresh": 0,
+      "wallclock_s": 4072.1506690979004,
+      "loss_low_entropy": 0.45208498418331144,
+      "loss_high_entropy": 2.8628923416137697
+    },
+    {
+      "seed": 1,
+      "supervision": "topk",
+      "selection": "student",
+      "recipe": "gkd",
+      "refresh": 0,
+      "wallclock_s": 4035.0741362571716,
+      "loss_low_entropy": 0.4261854100227356,
+      "loss_high_entropy": 3.6273290872573853
+    },
+    {
+      "seed": 1,
+      "supervision": "exact",
+      "selection": "teacher",
+      "recipe": "gkd",
+      "refresh": 0,
+      "wallclock_s": 4051.979060649872,
+      "loss_low_entropy": 0.4217793047428131,
+      "loss_high_entropy": 0.6908478021621705
+    },
+    {
+      "seed": 2,
+      "supervision": "topk",
+      "selection": "teacher",
+      "recipe": "gkd",
+      "refresh": 0,
+      "wallclock_s": 4112.723452806473,
+      "loss_low_entropy": 0.4414715665578842,
+      "loss_high_entropy": 2.757454762458801
+    },
+    {
+      "seed": 2,
+      "supervision": "topk",
+      "selection": "student",
+      "recipe": "gkd",
+      "refresh": 0,
+      "wallclock_s": 4139.9486293792725,
+      "loss_low_entropy": 0.41505976498126984,
+      "loss_high_entropy": 2.692575469017029
+    },
+    {
+      "seed": 2,
+      "supervision": "exact",
+      "selection": "teacher",
+      "recipe": "gkd",
+      "refresh": 0,
+      "wallclock_s": 4294.11172580719,
+      "loss_low_entropy": 0.4024974125623703,
+      "loss_high_entropy": 0.6835735929012299
+    }
+  ],
+  "_hash": "ce103b28791ed2ee"
+}

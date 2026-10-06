@@ -1,0 +1,11 @@
+{
+  "kind": "hidden_state",
+  "dtype": "bf16",
+  "d": 2048,
+  "k": 0,
+  "n_positions": 8192,
+  "n_shards": 1,
+  "bytes_on_disk": 33554560,
+  "teacher": "qwen3-1.7b",
+  "softcap": 0.0
+}

@@ -1,0 +1,11 @@
+{
+  "kind": "hidden_state",
+  "dtype": "fp32",
+  "d": 5120,
+  "k": 0,
+  "n_positions": 8192,
+  "n_shards": 1,
+  "bytes_on_disk": 167772288,
+  "teacher": "qwen3-32b",
+  "softcap": 0.0
+}

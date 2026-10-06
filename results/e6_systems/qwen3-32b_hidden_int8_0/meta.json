@@ -1,0 +1,11 @@
+{
+  "kind": "hidden_state",
+  "dtype": "int8",
+  "d": 5120,
+  "k": 0,
+  "n_positions": 8192,
+  "n_shards": 1,
+  "bytes_on_disk": 41976064,
+  "teacher": "qwen3-32b",
+  "softcap": 0.0
+}
