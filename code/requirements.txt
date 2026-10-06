@@ -1,0 +1,17 @@
+# Core (theory verification, reconstruction, E2 synthetic) needs only these:
+numpy>=1.26
+scipy>=1.11
+scikit-learn>=1.3
+
+# Training and real-teacher experiments (E1, E3-E9):
+torch>=2.4
+transformers>=4.44
+datasets>=2.20
+accelerate>=0.33
+safetensors>=0.4
+
+# Evaluation harness for the declared downstream suite:
+lm-eval>=0.4.3
+
+# Plotting:
+matplotlib>=3.8
